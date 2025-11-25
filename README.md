@@ -1,4 +1,4 @@
-# Check Live on Vercel - [https://digital-resume-nextjs.vercel.app/](https://digital-resume-nextjs.vercel.app/) in your browser
+# Check Live on Vercel - <a href="https://digital-resume-nextjs.vercel.app/" target="_blank">Digital Resume Next.js</a>
 
 # Next.js Designer Portfolio
 

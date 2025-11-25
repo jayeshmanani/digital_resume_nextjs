@@ -1,6 +1,7 @@
 'use client';
 import { BentoGrid, BentoGridItem } from "./BentoGrid";
 import { FaShieldAlt, FaCode, FaServer, FaCloud, FaDatabase, FaFileContract } from "react-icons/fa";
+import { useState, useEffect } from "react";
 
 export default function Skills() {
     return (
@@ -80,15 +81,26 @@ const PipelineFlow = () => (
     </div>
 );
 
-const DataStream = () => (
-    <div className="w-full h-full bg-black rounded-xl p-2 font-mono text-[10px] text-green-500/80 overflow-hidden flex flex-col">
-        {[...Array(6)].map((_, i) => (
-            <div key={i} className="truncate animate-[slideUp_5s_linear_infinite]" style={{ animationDelay: `${i * 0.5}s` }}>
-                {`0x${Math.random().toString(16).slice(2, 10)}...${Math.random().toString(16).slice(2, 6)}`}
-            </div>
-        ))}
-    </div>
-);
+const DataStream = () => {
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        const randomData = [...Array(6)].map(() =>
+            `0x${Math.random().toString(16).slice(2, 10)}...${Math.random().toString(16).slice(2, 6)}`
+        );
+        setData(randomData);
+    }, []);
+
+    return (
+        <div className="w-full h-full bg-black rounded-xl p-2 font-mono text-[10px] text-green-500/80 overflow-hidden flex flex-col">
+            {data.map((text, i) => (
+                <div key={i} className="truncate animate-[slideUp_5s_linear_infinite]" style={{ animationDelay: `${i * 0.5}s` }}>
+                    {text}
+                </div>
+            ))}
+        </div>
+    );
+};
 
 const ComplianceDoc = () => (
     <div className="w-full h-full bg-slate-800 rounded-xl p-3 relative flex flex-col gap-2 border border-slate-700">

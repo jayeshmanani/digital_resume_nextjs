@@ -1,3 +1,5 @@
+# Check Live on Vercel - [https://digital-resume-nextjs.vercel.app/](https://digital-resume-nextjs.vercel.app/) in your browser
+
 # Next.js Designer Portfolio
 
 A high-performance, interactive portfolio website built with Next.js 14, Tailwind CSS, and Framer Motion.
